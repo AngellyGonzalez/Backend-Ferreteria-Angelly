@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { eliminarCompra, obtenerCompras, registrarCompra } from '../controllers/compra.controller.js';
+import { actualizarCompraPatch, eliminarCompra, obtenerCompras, registrarCompra } from '../controllers/compra.controller.js';
 
 const router = Router();
 
@@ -14,5 +14,8 @@ router.post('/registrarcompra',registrarCompra);
 
 // Ruta para eliminar un compra por su ID
 router.delete('/eliminarcompra/:id_compra', eliminarCompra);
+
+// Ruta para actualizar una Compra por su ID
+router.patch('/actualizarcomprapatch/:id_compra', actualizarCompraPatch);
 
 export default router;

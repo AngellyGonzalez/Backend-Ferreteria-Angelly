@@ -76,3 +76,34 @@ export const eliminarUsuarios = async (req, res) => {
   }
 };
 
+// Actualizar una Usuario por id 
+export const actualizarUsuarioPatch = async (req, res) => {
+  try {
+    const {id_usuario} = req.params;
+    const datos  = req.body;
+
+    const [result] = await pool.query(
+      'UPDATE Usuarios SET ? WHERE id_usuario = ?',
+      [datos,  id_usuario ]
+    );
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({
+        mensaje:' Usuario con . ID ${id_usuario} no encontrado.'
+      });
+    }
+
+    res.status(200).json({
+      mensaje: 'Uusario con ID ${id_usuario} actualizada correctamente.'
+    });
+  } catch (error) {
+    res.status(500).json({
+      mensaje: 'Ha ocurrido un error al actualizar la usuario.',
+      error: error
+    });
+  }
+};
+
+
+
+
