@@ -65,7 +65,7 @@ export const eliminarEmpleado = async (req, res) => {
   try {
     const id_empleado = req.params.id_empleado;
     const [result] = await pool.query(
-      'DELETE FROM empleados WHERE id_empleado = ?',
+      'DELETE FROM Empleados WHERE id_empleado = ?',
       [id_empleado]
     );
 
