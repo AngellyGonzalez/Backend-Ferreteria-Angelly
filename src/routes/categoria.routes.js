@@ -6,7 +6,7 @@ const router = Router();
 // Ruta para obtener todos los categoria
 router.get('/categorias', obtenerCategorias);
 
-// Ruta para obtenes una categoria por su ID
+// Ruta para obtener una categoria por su ID
 router.get('/categoria/:id_categoria',obtenerCategoria);
 
 // Ruta para registrar una nueva categoria

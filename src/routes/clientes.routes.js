@@ -6,10 +6,10 @@ const router = Router();
 // Ruta para obtener todos los clientes
 router.get('/clientes', obtenerClientes);
 
-// Ruta para obtenes una cliente por su ID
+// Ruta para obtener una cliente por su ID
 router.get('/cliente/:id_cliente',obtenerCliente);
 
-// Ruta para registrar una nueva cliente
+// Ruta para registrar un nuevo cliente
 router.post('/registrarcliente',registrarCliente);
 
 // Ruta para eliminar un cliente por su ID

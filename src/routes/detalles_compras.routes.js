@@ -6,7 +6,7 @@ const router = Router();
 // Ruta para obtener todos los detalles_compras
 router.get('/Detalles_compras', obtenerDetallesCompras);
 
-// Ruta para obtenes una detalletes_compras por su ID
+// Ruta para obtener una detalletes_compras por su ID
 router.get('/Detalles_compras/:id_detalles_compras',obtenerDetalle_Compra);
 
 // Ruta para registrar una nueva detalle_compra

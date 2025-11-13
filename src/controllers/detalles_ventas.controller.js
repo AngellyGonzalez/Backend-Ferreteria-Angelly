@@ -13,7 +13,7 @@ export const obtenerDetallesVentas = async (req, res) => {
 };
 
 // Obtener una detalles_ventas por su ID
-export const obtenerDetalles_Ventas = async (req, res) => {
+export const obtenerDetalle_Venta = async (req, res) => {
     try {
         const id_detalles_ventas = req.params.id_detalles_ventas;
         const [result] = await pool.query('SELECT * FROM detalles_ventas WHERE id_detalles_ventas = ?', [req.params.id_detalles_ventas]);
