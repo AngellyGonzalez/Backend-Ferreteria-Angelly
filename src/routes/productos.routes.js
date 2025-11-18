@@ -4,7 +4,7 @@ import { actualizarProductoPatch, eliminarProducto, obtenerProductos,obtenerProd
 const router = Router();
 
 // Ruta para obtener todos los productos
-router.get('/producto', obtenerProductos);
+router.get('/productos', obtenerProductos);
 
 // Ruta para obtener una productos por su ID
 router.get('/producto/:id_producto',obtenerProducto);

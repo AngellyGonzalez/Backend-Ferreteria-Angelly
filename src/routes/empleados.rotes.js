@@ -4,7 +4,7 @@ import { actualizarEmpleadoPatch, eliminarEmpleado, obtenerEmpleados,obtenerEmpl
 const router = Router();
 
 // Ruta para obtener todos los empleados
-router.get('/empleado', obtenerEmpleados);
+router.get('/empleados', obtenerEmpleados);
 
 // Ruta para obtener  empleados por su ID
 router.get('/empleado/:id_empleado',obtenerEmpleado);
